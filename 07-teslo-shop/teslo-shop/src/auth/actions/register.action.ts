@@ -19,5 +19,6 @@ export const registerAction = async (
 
   } catch (error) {
     console.log(error);
+    throw error;
   }
 }

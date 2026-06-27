@@ -18,7 +18,6 @@ export const useProduct = (id: string) => {
   const mutation = useMutation({
     mutationFn: createUpdateProductAction,
     onSuccess: (product: Product) => {
-      console.log('Todo salio bien', product);
       // Invalidar cache
       queryClient.invalidateQueries({ queryKey: ['products'] });
       queryClient.invalidateQueries({ queryKey: ['product', { id: product.id }] });
