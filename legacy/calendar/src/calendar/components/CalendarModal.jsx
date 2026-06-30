@@ -85,8 +85,6 @@ export const CalendarModal = () => {
       Swal.fire('Falta titulo', 'Es necesario que el evento tenga titulo', 'error');
       return;
     }
-    console.log(formValues)
-    // TODO:
     await startSavingEvent(formValues);
     // cerrar modal
     closeDateModal();
